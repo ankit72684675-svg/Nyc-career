@@ -1,0 +1,446 @@
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #4a0b13;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+  position: relative;
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 65px;
+  height: 65px;
+
+  display: block;
+  object-fit: contain;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-text h3 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.logo-text p {
+  margin: 4px 0 0;
+
+  color: #c9a24a;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.nav-menu a {
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #c9a24a;
+}
+
+
+/* =========================================================
+   NAV BUTTONS
+========================================================= */
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.login-btn,
+.signup-btn {
+  min-height: 40px;
+
+  padding: 10px 18px;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+
+/* Login */
+
+.login-btn {
+  background-color: transparent;
+
+  border: 1px solid #c9a24a;
+
+  color: #ffffff;
+}
+
+.login-btn:hover {
+  background-color: #c9a24a;
+  color: #30070d;
+}
+
+
+/* Signup */
+
+.signup-btn {
+  background-color: #c9a24a;
+
+  border: 1px solid #c9a24a;
+
+  color: #30070d;
+}
+
+.signup-btn:hover {
+  background-color: #e0b95a;
+  border-color: #e0b95a;
+}
+
+
+/* Button click effect */
+
+.login-btn:active,
+.signup-btn:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.hamburger {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: 1px solid #c9a24a;
+  border-radius: 5px;
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  flex-shrink: 0;
+}
+
+.hamburger span {
+  width: 22px;
+  height: 2px;
+
+  display: block;
+
+  background-color: #c9a24a;
+  border-radius: 2px;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   TABLET
+   769px - 1000px
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .nav-menu {
+    gap: 16px;
+
+    margin-right: 20px;
+  }
+
+  .nav-menu a {
+    font-size: 13px;
+  }
+
+  .nav-buttons {
+    gap: 6px;
+  }
+
+  .login-btn,
+  .signup-btn {
+    padding: 9px 13px;
+
+    font-size: 13px;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-text h3 {
+    font-size: 16px;
+  }
+
+  .logo-text p {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   0px - 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 75px;
+    padding: 0 20px;
+  }
+
+
+  /* -----------------------------------------
+     Mobile Logo
+  ----------------------------------------- */
+
+  .logo {
+    gap: 8px;
+  }
+
+  .logo img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .logo-text h3 {
+    font-size: 15px;
+  }
+
+  .logo-text p {
+    margin-top: 3px;
+    font-size: 10px;
+  }
+
+
+  /* -----------------------------------------
+     Hide Desktop Navigation
+  ----------------------------------------- */
+
+  .nav-menu {
+    display: none;
+  }
+
+
+  /* -----------------------------------------
+     Hide Desktop Buttons
+  ----------------------------------------- */
+
+  .nav-buttons {
+    display: none;
+  }
+
+
+  /* -----------------------------------------
+     Show Hamburger
+  ----------------------------------------- */
+
+  .hamburger {
+    display: flex;
+  }
+
+
+  /* -----------------------------------------
+     Mobile Dropdown Menu
+  ----------------------------------------- */
+
+  .nav-menu.active {
+    display: flex;
+
+    position: absolute;
+
+    top: 75px;
+    left: 0;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 10px 0;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+
+    background-color: #4a0b13;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    z-index: 999;
+  }
+
+  .nav-menu.active a {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-size: 15px;
+  }
+
+  .nav-menu.active a:hover {
+    background-color: #30070d;
+    color: #c9a24a;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   0px - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .logo {
+    gap: 7px;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-text h3 {
+    font-size: 14px;
+  }
+
+  .logo-text p {
+    font-size: 9px;
+  }
+
+  .hamburger {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hamburger span {
+    width: 20px;
+  }
+
+  .nav-menu.active {
+    top: 70px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   0px - 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .navbar {
+    padding: 0 12px;
+  }
+
+  .logo img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .logo-text h3 {
+    font-size: 13px;
+  }
+
+  .logo-text p {
+    font-size: 8px;
+  }
+
+  .hamburger {
+    width: 38px;
+    height: 38px;
+  }
+}

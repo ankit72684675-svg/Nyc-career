@@ -1,0 +1,396 @@
+/* =====================================
+   BIGGER JOBS + TRAINING SECTION
+===================================== */
+
+.jobs-training-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  padding: 30px 4% 40px;
+
+  background: #ffffff;
+
+  gap: 30px;
+}
+
+
+/* =====================================
+   SECTION HEADINGS
+===================================== */
+
+.section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.section-title-row h2 {
+  margin: 0;
+
+  color: #5d1119;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.section-title-row a {
+  color: #64131b;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =====================================
+   FEATURED JOBS
+===================================== */
+
+.featured-jobs {
+  padding-right: 30px;
+
+  border-right: 1px solid #ddd;
+}
+
+
+.job-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+
+/* JOB CARD */
+
+.job-card {
+  background: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 9px;
+
+  padding: 18px;
+
+  min-height: 220px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* COMPANY LOGO */
+
+.company-logo {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+
+/* TCS */
+
+.tcs-logo {
+  gap: 6px;
+
+  color: #e32119;
+}
+
+.tcs-logo span {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.tcs-logo small {
+  font-size: 7px;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+
+/* WIPRO */
+
+.wipro-logo {
+  color: #6c4ab6;
+
+  font-size: 24px;
+}
+
+
+/* INFOSYS */
+
+.infosys-logo {
+  color: #007cc3;
+
+  font-size: 21px;
+}
+
+
+/* JOB TITLE */
+
+.job-card h3 {
+  color: #111;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  margin: 7px 0;
+}
+
+
+/* COMPANY */
+
+.company-name {
+  color: #333;
+
+  font-size: 12px;
+
+  margin: 0 0 12px;
+}
+
+
+/* LOCATION */
+
+.location {
+  color: #555;
+
+  font-size: 11px;
+
+  margin: 0 0 13px;
+}
+
+
+/* TAGS */
+
+.job-tags {
+  display: flex;
+
+  gap: 7px;
+}
+
+.job-tags span {
+  background: #f2f2f2;
+
+  color: #333;
+
+  padding: 6px 9px;
+
+  border-radius: 5px;
+
+  font-size: 10px;
+}
+
+
+/* DETAILS */
+
+.job-details {
+  border-top: 1px solid #eee;
+
+  margin-top: 14px;
+
+  padding-top: 10px;
+
+  color: #64131b;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+/* =====================================
+   POPULAR TRAINING
+===================================== */
+
+.popular-training {
+  padding-left: 0;
+}
+
+
+/* TRAINING CARDS */
+
+.training-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+
+.training-card {
+  background: #ffffff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 9px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.training-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* TRAINING IMAGE */
+
+.training-card img {
+  width: 100%;
+
+  height: 115px;
+
+  display: block;
+
+  object-fit: contain ;
+}
+
+
+/* TRAINING CONTENT */
+
+.training-content {
+  padding: 13px;
+}
+
+
+.training-content h3 {
+  color: #222;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  margin: 0 0 8px;
+}
+
+
+.training-content p {
+  color: #555;
+
+  font-size: 11px;
+
+  margin: 0 0 7px;
+}
+
+
+/* PRICE */
+
+.price {
+  color: #64131b;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+.price del {
+  color: #888;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  margin-left: 4px;
+}
+
+
+/* ENROLL BUTTON */
+
+.training-content button {
+  width: 100%;
+
+  border: none;
+
+  background: #64131b;
+
+  color: #ffffff;
+
+  padding: 9px;
+
+  border-radius: 5px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1000px) {
+
+  .jobs-training-section {
+    grid-template-columns: 1fr;
+
+    padding: 30px 5%;
+  }
+
+  .featured-jobs {
+    padding-right: 0;
+
+    border-right: none;
+
+    border-bottom: 1px solid #ddd;
+
+    padding-bottom: 30px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+  .jobs-training-section {
+    padding: 25px 15px;
+  }
+
+  .section-title-row h2 {
+    font-size: 21px;
+  }
+
+  .section-title-row a {
+    font-size: 11px;
+  }
+
+  .job-cards,
+  .training-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .job-card {
+    min-height: 200px;
+  }
+
+  .training-card img {
+    height: 150px;
+  }
+
+}

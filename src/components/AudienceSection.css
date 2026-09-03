@@ -1,0 +1,108 @@
+/* =========================
+   CANDIDATES / EMPLOYERS
+========================= */
+
+.audience-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+/* BOX */
+
+.audience-box {
+  min-height: 390px;
+
+  display: flex;
+  align-items: stretch;
+
+  position: relative;
+
+  padding: 10px 45px;
+
+  overflow: hidden;
+}
+
+
+/* BACKGROUNDS */
+
+.candidates-box {
+  background: #fff0ed;
+  border-right: 1px solid #ddd;
+}
+
+.employers-box {
+  background: #fff8e9;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.audience-image {
+  width: 35%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.audience-image img {
+  width: 100%;
+  max-width: 270px;
+
+  height: 385px;
+
+  object-fit: contain;
+  object-position: bottom;
+}
+
+
+/* EMPLOYER IMAGE */
+
+.employer-image {
+  order: 2;
+}
+
+.employer-image img {
+  max-width: 285px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.audience-content {
+  flex: 1;
+
+  padding: 25px 5px 20px 20px;
+}
+
+
+.audience-content h2 {
+  color: #5d1119;
+
+  font-size: 27px;
+  font-weight: 700;
+
+  margin: 0 0 7px;
+}
+
+
+.audience-description {
+  color: #222;
+
+  font-size: 15px;
+  line-height: 1.55;
+
+  max-width: 370px;
+
+  margin: 0 0 22px;
+
+  padding-bottom: 9px;
+
+  border-bottom: 2px solid #d99a18;
+}

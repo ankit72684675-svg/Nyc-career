@@ -1,0 +1,197 @@
+/* CARDS CONTAINER */
+
+.journey-container {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 70px;
+
+  max-width: 1250px;
+  margin: auto;
+}
+
+
+/* CARD */
+
+.journey-card {
+  position: relative;
+
+  min-height: 200px;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  padding: 45px 20px 20px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 15px rgba(100, 60, 20, 0.10);
+
+  border: 1px solid rgba(201, 162, 74, 0.15);
+
+  transition: all 0.3s ease;
+}
+
+
+/* CARD HOVER */
+
+.journey-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 8px 25px rgba(100, 60, 20, 0.16);
+}
+
+
+/* NUMBER */
+
+.step-number {
+  position: absolute;
+
+  top: -23px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #d99308;
+
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ICON */
+
+.journey-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff6e8;
+
+  font-size: 32px;
+}
+
+
+/* TITLE */
+
+.journey-card h3 {
+  color: #64131b;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  margin: 5px 0 8px;
+}
+
+
+/* DESCRIPTION */
+
+.journey-card p {
+  color: #222;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  margin: 0;
+}
+
+
+/* =========================
+   ARROWS BETWEEN CARDS
+========================= */
+
+.journey-card:not(:last-child)::after {
+  content: "➜";
+
+  position: absolute;
+
+  right: -53px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #d99308;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .journey-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .journey-card:not(:last-child)::after {
+    display: none;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .career-journey {
+    padding: 40px 20px;
+  }
+
+  .journey-heading h2 {
+    font-size: 27px;
+  }
+
+  .journey-tagline {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .journey-heading p {
+    font-size: 13px;
+  }
+
+  .journey-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .journey-card {
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+  }
+
+}
+

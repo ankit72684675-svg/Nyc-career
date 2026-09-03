@@ -1,0 +1,334 @@
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding: 60px 80px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+.hero-content {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tagline {
+  color: #f1a203;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  z-index: 5;
+}
+
+.hero-tagline::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 3px;
+  background-color: #f1a203;
+  margin-top: 6px;
+  position: relative;
+  z-index: 5;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.primary-btn,
+.secondary-btn {
+  position: static;
+
+  padding: 14px 28px;
+  border-radius: 5px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* PRIMARY */
+
+.primary-btn {
+  background-color: #e8fa21;
+  color: #000000;
+  border: 1px solid #e8fa21;
+}
+
+.primary-btn:hover {
+  background-color: #d7e91b;
+}
+
+/* SECONDARY */
+
+.secondary-btn {
+  background-color: #4A0B13;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.secondary-btn:hover {
+  background-color: #30070D;
+}
+
+/* =========================
+   HERO STATS
+========================= */
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 55px;
+  padding: 25px 0;
+
+  border-top: 1px solid rgba(201, 162, 74, 0.4);
+  border-bottom: 1px solid rgba(201, 162, 74, 0.4);
+}
+
+.hero-stat {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+  padding: 0 25px;
+
+  border-right: 1px solid rgba(201, 162, 74, 0.3);
+}
+
+.hero-stat:last-child {
+  border-right: none;
+}
+
+
+/* ICON */
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+
+  min-width: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #c9a24a;
+  border-radius: 50%;
+
+  font-size: 21px;
+}
+
+
+/* TEXT */
+
+.hero-stat h4 {
+  margin: 0 0 5px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hero-stat p {
+  margin: 0;
+
+  color: #c9a24a;
+
+  font-size: 13px;
+}
+
+
+
+/* =========================
+   CAREER JOURNEY SECTION
+========================= */
+
+.career-journey {
+  width: 100%;
+  background: #fffaf3;
+  padding: 45px 5% 55px;
+}
+
+
+/* HEADING */
+
+.journey-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.journey-tagline {
+  color: #d99308;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 10px;
+}
+
+.journey-tagline span {
+  font-size: 20px;
+}
+
+.journey-heading h2 {
+  color: #5a1018;
+  font-size: 34px;
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+.journey-heading p {
+  color: #222;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* HERO RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .hero {
+    padding: 50px 40px;
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* TABLET + MOBILE */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 50px 20px;
+    background-position: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-tagline {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px;
+    padding: 15px 0;
+  }
+
+  .hero-stat {
+    padding: 15px 10px;
+  }
+}
+
+
+/* iPhone XR / SMALL MOBILE */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 50px 20px;
+
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+  }
+}
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-stat {
+    gap: 8px;
+    padding: 12px 5px;
+  }
+
+  .stat-icon {
+    font-size: 20px;
+  }
+
+  .hero-stat h4 {
+    font-size: 12px;
+  }
+
+  .hero-stat p {
+    font-size: 11px;
+  }
+}

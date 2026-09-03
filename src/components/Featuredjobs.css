@@ -1,0 +1,180 @@
+.feature-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px 15px;
+
+  margin-top: 18px;
+}
+
+
+.feature-item {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  min-width: 0;
+}
+
+
+.feature-item span {
+  width: 35px;
+  min-width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 23px;
+}
+
+
+.feature-item p {
+  color: #222;
+
+  font-size: 12px;
+  line-height: 1.35;
+
+  margin: 0;
+}
+
+
+/* =========================
+   EMPLOYER FEATURES
+========================= */
+
+.employer-features {
+  grid-template-columns: repeat(3, 1fr);
+
+  margin-top: 25px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.audience-btn {
+  margin-top: 25px;
+
+  padding: 11px 20px;
+
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  border: none;
+
+  transition: 0.3s;
+}
+
+
+.candidate-btn {
+  background: #69131c;
+  color: #ffffff;
+}
+
+
+.candidate-btn:hover {
+  background: #4a0b13;
+}
+
+
+.employer-btn {
+  background: #d9950b;
+  color: #ffffff;
+}
+
+
+.employer-btn:hover {
+  background: #bd7c00;
+}
+
+
+.audience-btn span {
+  font-size: 20px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .audience-section {
+    grid-template-columns: 1fr;
+  }
+
+  .candidates-box {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .audience-box {
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .audience-image {
+    width: 32%;
+  }
+
+  .audience-image img {
+    height: 270px;
+    max-width: 200px;
+  }
+
+  .audience-content {
+    padding: 15px 0 15px 10px;
+  }
+
+  .audience-content h2 {
+    font-size: 20px;
+  }
+
+  .audience-description {
+    font-size: 12px;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 5px;
+  }
+
+  .employer-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-item span {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    font-size: 19px;
+  }
+
+  .feature-item p {
+    font-size: 10px;
+  }
+
+}
+

@@ -1,0 +1,114 @@
+
+.final-cta {
+  width: 100%;
+
+  background: #5d1119;
+
+  padding: 55px 20px;
+
+  text-align: center;
+}
+
+
+.cta-content {
+  max-width: 750px;
+
+  margin: auto;
+}
+
+
+.cta-tagline {
+  color: #d9a329;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin: 0 0 10px;
+}
+
+
+.cta-content h2 {
+  color: #ffffff;
+
+  font-size: 38px;
+
+  font-weight: 700;
+
+  margin: 0 0 12px;
+}
+
+
+.cta-description {
+  color: #ffffff;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  max-width: 600px;
+
+  margin: 0 auto 25px;
+
+  opacity: 0.9;
+}
+
+
+/* CTA BUTTONS */
+
+.cta-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+}
+
+
+.cta-primary,
+.cta-secondary {
+  padding: 13px 25px;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.cta-primary {
+  background: #d9a329;
+
+  color: #4a0b13;
+
+  border: 1px solid #d9a329;
+}
+
+
+.cta-primary:hover {
+  background: #edbd48;
+}
+
+
+.cta-secondary {
+  background: transparent;
+
+  color: #ffffff;
+
+  border: 1px solid #ffffff;
+}
+
+
+.cta-secondary:hover {
+  background: #ffffff;
+
+  color: #5d1119;
+}
+
