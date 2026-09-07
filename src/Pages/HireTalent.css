@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap");
+
+.hire-page {
+  --hire-ink: #14213d;
+  --hire-ink-soft: #526078;
+  --hire-paper: #f6f3ec;
+  --hire-line: #ded6c4;
+  --hire-brass: #b8863e;
+  --hire-brass-deep: #96682c;
+  min-height: 100vh;
+  background: var(--hire-paper);
+  color: var(--hire-ink-soft);
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hire-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.hire-hero {
+  background: var(--hire-ink);
+  color: #f6f3ec;
+}
+
+.hire-hero-grid {
+  min-height: 390px;
+  padding-top: 78px;
+  padding-bottom: 78px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  align-items: center;
+  gap: 72px;
+}
+
+.hire-eyebrow,
+.hire-section-label {
+  color: var(--hire-brass-deep);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hire-eyebrow {
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e7d7b8;
+  color: #e7d7b8;
+  margin-bottom: 24px;
+}
+
+.hire-hero h1,
+.hire-copy h2,
+.hire-form-panel h2 {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.hire-hero h1 {
+  max-width: 16ch;
+  color: #f6f3ec;
+  font-size: clamp(2.7rem, 5vw, 4.5rem);
+  letter-spacing: -0.02em;
+}
+
+.hire-hero p {
+  max-width: 53ch;
+  margin: 24px 0 0;
+  color: #c4c9d6;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.hire-hero-mark {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  justify-self: center;
+  border: 1px solid rgba(231, 215, 184, 0.45);
+  border-radius: 50%;
+}
+
+.hire-hero-mark::before {
+  position: absolute;
+  inset: 30px;
+  border: 1px solid rgba(231, 215, 184, 0.55);
+  border-radius: 50%;
+  content: "";
+}
+
+.hire-mark-line {
+  position: absolute;
+  height: 1px;
+  background: #e7d7b8;
+  opacity: 0.6;
+  transform-origin: left center;
+}
+
+.hire-mark-line-one {
+  top: 114px;
+  left: 37px;
+  width: 105px;
+  transform: rotate(-34deg);
+}
+
+.hire-mark-line-two {
+  top: 114px;
+  left: 114px;
+  width: 87px;
+  transform: rotate(38deg);
+}
+
+.hire-mark-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #e7d7b8;
+  border-radius: 50%;
+  background: var(--hire-ink);
+}
+
+.hire-mark-dot-one {
+  top: 105px;
+  left: 105px;
+  background: var(--hire-brass);
+  box-shadow: 0 0 0 8px rgba(184, 134, 62, 0.14);
+}
+
+.hire-mark-dot-two {
+  top: 53px;
+  left: 31px;
+}
+
+.hire-mark-dot-three {
+  top: 169px;
+  right: 22px;
+}
+
+.hire-section {
+  padding: 92px 0 110px;
+}
+
+.hire-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
+  align-items: start;
+  gap: 84px;
+}
+
+.hire-copy h2 {
+  max-width: 10ch;
+  margin-top: 16px;
+  color: var(--hire-ink);
+  font-size: clamp(2.1rem, 3vw, 3rem);
+}
+
+.hire-copy > p {
+  max-width: 40ch;
+  margin: 22px 0 0;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.hire-benefits {
+  display: grid;
+  gap: 16px;
+  margin: 42px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--hire-ink);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.hire-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--hire-line);
+}
+
+.hire-benefits span {
+  color: var(--hire-brass-deep);
+  font-family: "Fraunces", Georgia, serif;
+}
+
+.hire-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 42px;
+  color: var(--hire-brass-deep);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hire-back-link:hover {
+  text-decoration: underline;
+}
+
+.hire-back-link span {
+  font-size: 1.2rem;
+}
+
+.hire-form-panel {
+  padding: 46px;
+  border: 1px solid var(--hire-line);
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(20, 33, 61, 0.08);
+}
+
+.hire-form-panel h2 {
+  margin-top: 12px;
+  color: var(--hire-ink);
+  font-size: 2rem;
+}
+
+.hire-form-heading > p:last-child {
+  margin: 12px 0 0;
+  font-size: 0.95rem;
+}
+
+.hire-form {
+  display: grid;
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.hire-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.hire-field {
+  display: grid;
+  gap: 8px;
+}
+
+.hire-field label {
+  color: var(--hire-ink);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.hire-field input,
+.hire-field textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--hire-line);
+  border-radius: 0;
+  background: #fff;
+  color: var(--hire-ink);
+  font: inherit;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hire-field input {
+  min-height: 48px;
+}
+
+.hire-field input:focus,
+.hire-field textarea:focus {
+  border-color: var(--hire-brass);
+  box-shadow: 0 0 0 3px rgba(184, 134, 62, 0.14);
+}
+
+.hire-field input::placeholder,
+.hire-field textarea::placeholder {
+  color: #9a9da4;
+}
+
+.hire-submit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+  padding: 14px 18px;
+  border: 1px solid var(--hire-ink);
+  background: var(--hire-ink);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.hire-submit:hover {
+  background: #253758;
+}
+
+.hire-submit:active {
+  transform: translateY(1px);
+}
+
+.hire-submit span {
+  font-size: 1.2rem;
+}
+
+.hire-success {
+  margin-top: 24px;
+  padding: 13px 15px;
+  border: 1px solid #9bb09b;
+  background: #eef3ec;
+  color: #3d5e42;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+  .hire-grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .hire-copy h2 {
+    max-width: 14ch;
+  }
+}
+
+@media (max-width: 760px) {
+  .hire-hero-grid {
+    min-height: auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hire-hero-mark {
+    width: 180px;
+    height: 180px;
+    justify-self: start;
+  }
+
+  .hire-section {
+    padding-top: 64px;
+    padding-bottom: 80px;
+  }
+
+  .hire-form-panel {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hire-container {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .hire-form-row {
+    grid-template-columns: 1fr;
+  }
+}

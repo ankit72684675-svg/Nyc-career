@@ -1,5 +1,6 @@
 
 import "./TrainingPrograms.css";
+import { Link } from "react-router-dom";
 function TrainingPrograms() {
   return (
     <section className="final-cta">
@@ -21,13 +22,13 @@ function TrainingPrograms() {
 
         <div className="cta-buttons">
 
-          <button className="cta-primary">
+          <Link className="cta-primary" to="/ExploreCareer">
             Explore Careers →
-          </button>
+          </Link>
 
-          <button className="cta-secondary">
+          <Link className="cta-secondary" to="/hire-talent">
             Hire Talent →
-          </button>
+          </Link>
 
         </div>
 

@@ -1,6 +1,7 @@
 
 import "./FinalCTA.css";
 import "./Footer.css";
+
 function FinalCTA() {
   return (
    <footer className="footer">
@@ -12,8 +13,7 @@ function FinalCTA() {
     <div className="footer-about">
 
       <div className="footer-logo">
-        <img src="logo.png" alt="NYC Logo" />
-
+         <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Navigate Your Career logo" />
         <div>
           <h3>NYC</h3>
           <p>Navigate Your Career</p>

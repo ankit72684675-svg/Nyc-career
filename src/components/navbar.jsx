@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Navbar.css";
+import "./navbar.css";
 import logo from "../assets/mylogo.png";
 import { Link } from "react-router-dom";
 
@@ -21,17 +21,27 @@ function Navbar() {
 
       {/* NAVIGATION */}
       <nav className={menuOpen ? "nav-menu active" : "nav-menu"}>
-        <a href="#" onClick={() => setMenuOpen(false)}>Home</a>
+        <Link to="/" onClick={() => setMenuOpen(false)}>
+  Home
+</Link>
 <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>   
-     <a href="#" onClick={() => setMenuOpen(false)}>Training</a>
-        <a href="#" onClick={() => setMenuOpen(false)}>Jobs</a>
-        <a href="#" onClick={() => setMenuOpen(false)}>Contact</a>
+<Link to="/training" onClick={() => setMenuOpen(false)}>
+  Training
+</Link>
+        <Link to="/Jobs" onClick={() => setMenuOpen(false)}>Jobs</Link>
+       <Link to="/contact" onClick={() => setMenuOpen(false)}>
+  Contact
+</Link>
       </nav>
 
       {/* BUTTONS */}
       <div className="nav-buttons">
-        <button className="login-btn">Login</button>
-        <button className="signup-btn">Get Started</button>
+        <Link className="login-btn" to="/login" onClick={() => setMenuOpen(false)}>
+          Login
+        </Link>
+        <Link className="signup-btn" to="/get-started" onClick={() => setMenuOpen(false)}>
+          Get Started
+        </Link>
       </div>
 
       {/* HAMBURGER */}

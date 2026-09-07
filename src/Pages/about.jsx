@@ -1,655 +1,976 @@
-import React from "react";
-import "./About.css";
-
-const services = [
-  {
-    number: "01",
-    icon: "♙",
-    title: "Career Development",
-    text: "Build professional skills, confidence and the practical abilities needed to move towards your career goals.",
-  },
-  {
-    number: "02",
-    icon: "♧",
-    title: "English & Communication",
-    text: "Improve spoken English, workplace communication and professional communication skills.",
-  },
-  {
-    number: "03",
-    icon: "▦",
-    title: "Personality Development",
-    text: "Develop confidence, professionalism and the personality needed to succeed in the workplace.",
-  },
-  {
-    number: "04",
-    icon: "♧",
-    title: "Interview Preparation",
-    text: "Prepare for interviews through structured guidance, practice and mock interview sessions.",
-  },
-  {
-    number: "05",
-    icon: "▱",
-    title: "Job Opportunities",
-    text: "Explore relevant opportunities and connect with employers looking for capable talent.",
-  },
-  {
-    number: "06",
-    icon: "♧",
-    title: "Recruitment Solutions",
-    text: "Help organizations discover, screen and connect with suitable candidates.",
-  },
-];
-
-const journey = [
-  {
-    number: "01",
-    icon: "▢",
-    title: "Learn",
-    text: "Build the skills you need for your career.",
-  },
-  {
-    number: "02",
-    icon: "♧",
-    title: "Prepare",
-    text: "Develop confidence and interview readiness.",
-  },
-  {
-    number: "03",
-    icon: "◎",
-    title: "Practice",
-    text: "Practice communication and interview situations.",
-  },
-  {
-    number: "04",
-    icon: "♧",
-    title: "Connect",
-    text: "Connect with relevant career opportunities.",
-  },
-  {
-    number: "05",
-    icon: "⌁",
-    title: "Grow",
-    text: "Keep developing and build your career.",
-  },
-];
-
-const candidatePoints = [
-  "Job-ready training",
-  "Spoken English & communication",
-  "Personality development",
-  "Interview preparation",
-  "Mock interviews",
-  "Resume & LinkedIn development",
-  "Career guidance",
-  "Job opportunities",
-];
-
-const employerPoints = [
-  "Talent sourcing",
-  "Candidate screening",
-  "Entry-level hiring",
-  "Candidate assessment",
-  "Interview coordination",
-  "Recruitment support",
-];
+import Navbar from "../components/navbar";
+import Footer from "../components/FinalCTA";
+import { Link } from "react-router-dom";
+import "./about.css";
 
 function About() {
   return (
-    <main className="about-page">
+    <>
+      {/* ================= NAVBAR ================= */}
+      <Navbar />
 
-      {/* =====================================================
-          HERO
-      ====================================================== */}
+      {/* ================= ABOUT PAGE ================= */}
+      <main className="about-page">
 
-      <section className="about-hero">
+        {/* ================= HERO ================= */}
+        <section className="hero about-hero">
+          <div className="hero-dotgrid"></div>
+          <div className="hero-glow"></div>
 
-        {/* HERO IMAGE
-            Put image here:
-            public/images/hero-career.jpg
-        */}
-        <div className="hero-image"></div>
-
-        <div className="hero-overlay"></div>
-
-        {/* Decorative golden curve */}
-        <div className="hero-curve">
-          <span className="curve-arrow">↑</span>
-        </div>
-
-        <div className="about-container hero-container">
-
-          <div className="hero-content">
-
-            <span className="hero-kicker">
-              ABOUT NYC
-            </span>
-
-            <h1>
-              Navigate Your
-              <br />
-              Career
-              <span>
-                With
-                <br />
-                Confidence.
+          <div className="wrap">
+            <div className="hero-copy">
+              <span className="eyebrow">
+                About NYC
               </span>
-            </h1>
 
-            <p>
-              NYC — Navigate Your Career helps individuals become
-              professionally ready for employment through training,
-              communication development and interview preparation while
-              helping organizations connect with capable talent.
+              <h1>
+                Navigate Your Career.
+                <br />
+                Build Your Future.
+              </h1>
+
+              <p>
+                NYC helps individuals become professionally ready for real
+                opportunities while helping organizations connect with
+                capable, prepared talent.
+              </p>
+
+              <div className="hero-actions">
+                <a href="#services" className="btn btn-gold">
+                  Explore Training
+                </a>
+
+                <Link to="/ExploreCareer" className="btn btn-outline-light">
+                  Explore Careers
+                </Link>
+              </div>
+            </div>
+
+            <div className="hero-visual">
+              <svg
+                viewBox="0 0 480 460"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient
+                    id="pathGrad"
+                    x1="0"
+                    y1="1"
+                    x2="1"
+                    y2="0"
+                  >
+                    <stop offset="0" stopColor="#C9A24A" />
+                    <stop offset="1" stopColor="#E0B85A" />
+                  </linearGradient>
+                </defs>
+
+                <path
+                  d="M40,380 C120,380 100,300 180,290 C260,280 240,200 320,180 C380,165 380,110 440,90"
+                  fill="none"
+                  stroke="url(#pathGrad)"
+                  strokeWidth="2.5"
+                  strokeDasharray="1 9"
+                  strokeLinecap="round"
+                />
+
+                {/* Learn */}
+                <g transform="translate(40,380)">
+                  <circle r="30" fill="#4A0B13" />
+                  <circle
+                    r="30"
+                    fill="none"
+                    stroke="#C9A24A"
+                    strokeWidth="1.5"
+                    opacity="0.6"
+                  />
+
+                  <path
+                    d="M-10,-6 L0,-11 L10,-6 L10,6 L0,11 L-10,6 Z"
+                    fill="none"
+                    stroke="#E0B85A"
+                    strokeWidth="1.6"
+                  />
+                </g>
+
+                <text
+                  x="40"
+                  y="428"
+                  textAnchor="middle"
+                  fill="#F7F1E5"
+                  fontFamily="Manrope"
+                  fontSize="13"
+                  fontWeight="700"
+                >
+                  Learn
+                </text>
+
+                {/* Prepare */}
+                <g transform="translate(180,290)">
+                  <circle r="34" fill="#30070D" />
+
+                  <circle
+                    r="34"
+                    fill="none"
+                    stroke="#C9A24A"
+                    strokeWidth="1.5"
+                    opacity="0.7"
+                  />
+
+                  <circle
+                    r="12"
+                    fill="none"
+                    stroke="#E0B85A"
+                    strokeWidth="1.6"
+                  />
+
+                  <circle r="4" fill="#E0B85A" />
+                </g>
+
+                <text
+                  x="180"
+                  y="342"
+                  textAnchor="middle"
+                  fill="#F7F1E5"
+                  fontFamily="Manrope"
+                  fontSize="13"
+                  fontWeight="700"
+                >
+                  Prepare
+                </text>
+
+                {/* Connect */}
+                <g transform="translate(320,180)">
+                  <circle r="30" fill="#4A0B13" />
+
+                  <circle
+                    r="30"
+                    fill="none"
+                    stroke="#C9A24A"
+                    strokeWidth="1.5"
+                    opacity="0.6"
+                  />
+
+                  <circle
+                    cx="-9"
+                    cy="-3"
+                    r="4.5"
+                    fill="#E0B85A"
+                  />
+
+                  <circle
+                    cx="9"
+                    cy="7"
+                    r="4.5"
+                    fill="#E0B85A"
+                  />
+
+                  <line
+                    x1="-9"
+                    y1="-3"
+                    x2="9"
+                    y2="7"
+                    stroke="#E0B85A"
+                    strokeWidth="1.4"
+                  />
+                </g>
+
+                <text
+                  x="320"
+                  y="228"
+                  textAnchor="middle"
+                  fill="#F7F1E5"
+                  fontFamily="Manrope"
+                  fontSize="13"
+                  fontWeight="700"
+                >
+                  Connect
+                </text>
+
+                {/* Grow */}
+                <g transform="translate(440,90)">
+                  <circle r="38" fill="#C9A24A" />
+
+                  <path
+                    d="M-12,10 L0,-14 L12,10 Z"
+                    fill="#30070D"
+                  />
+                </g>
+
+                <text
+                  x="440"
+                  y="146"
+                  textAnchor="middle"
+                  fill="#F7F1E5"
+                  fontFamily="Manrope"
+                  fontSize="13"
+                  fontWeight="700"
+                >
+                  Grow
+                </text>
+
+                <circle
+                  cx="440"
+                  cy="90"
+                  r="54"
+                  fill="none"
+                  stroke="#E0B85A"
+                  strokeWidth="1"
+                  opacity="0.35"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
+
+
+        {/* ================= WHO WE ARE ================= */}
+        <section className="bg-white" id="who">
+          <div className="wrap">
+
+            <div className="section-head">
+              <div className="rule"></div>
+              <h2>Who We Are</h2>
+            </div>
+
+            <div className="who-grid">
+
+              <div className="who-intro">
+                <p>
+                  NYC — Navigate Your Career is a career development,
+                  job-readiness training and recruitment & talent solutions
+                  platform.
+                </p>
+
+                <p>
+                  We work on both sides of the employment journey — helping
+                  individuals become genuinely prepared for the workplace,
+                  and helping organizations connect with candidates who are
+                  ready to contribute from day one.
+                </p>
+
+                <p>
+                  It's a single, connected process: capability is built first,
+                  then matched with opportunity.
+                </p>
+              </div>
+
+              <div className="who-cols">
+
+                {/* Candidates */}
+                <div className="who-card">
+                  <span className="sub">For Candidates</span>
+
+                  <h4>Get workplace ready</h4>
+
+                  <ul>
+                    {[
+                      "Skill development",
+                      "Professional communication",
+                      "Spoken English",
+                      "Personality development",
+                      "Interview preparation & mock interviews",
+                      "Resume & LinkedIn profile development",
+                      "Career guidance",
+                      "Job opportunities",
+                    ].map((item, index) => (
+                      <li key={index}>
+                        <span className="check">✓</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Employers */}
+                <div className="who-card">
+                  <span className="sub">For Employers</span>
+
+                  <h4>Hire with confidence</h4>
+
+                  <ul>
+                    {[
+                      "Talent sourcing",
+                      "Candidate screening",
+                      "Entry-level hiring",
+                      "Candidate assessment",
+                      "Interview coordination",
+                      "Recruitment support",
+                      "Talent solutions",
+                    ].map((item, index) => (
+                      <li key={index}>
+                        <span className="check">✓</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* ================= PHILOSOPHY ================= */}
+        <section className="bg-cream">
+          <div className="wrap">
+
+            <div className="section-head center">
+              <h2>
+                Learn. Prepare. Connect. Grow.
+              </h2>
+
+              <p>
+                Four stages that shape how we work with every candidate
+                and every employer.
+              </p>
+            </div>
+
+            <div className="phil-grid">
+
+              {[
+                {
+                  number: "01",
+                  title: "Learn",
+                  text: "Build the skills and knowledge required for the workplace.",
+                },
+                {
+                  number: "02",
+                  title: "Prepare",
+                  text: "Develop communication, confidence, professional presence and interview readiness.",
+                },
+                {
+                  number: "03",
+                  title: "Connect",
+                  text: "Connect job-ready candidates with relevant career opportunities and employers with capable talent.",
+                },
+                {
+                  number: "04",
+                  title: "Grow",
+                  text: "Support long-term career development and professional growth.",
+                },
+              ].map((item) => (
+                <div className="phil-card" key={item.number}>
+
+                  <div className="phil-num">
+                    {item.number}
+                  </div>
+
+                  <div className="phil-icon">
+                    {item.number === "01" && "📖"}
+                    {item.number === "02" && "🎯"}
+                    {item.number === "03" && "🔗"}
+                    {item.number === "04" && "📈"}
+                  </div>
+
+                  <h3>{item.title}</h3>
+
+                  <p>{item.text}</p>
+                </div>
+              ))}
+
+            </div>
+          </div>
+        </section>
+
+
+        {/* ================= CAREER JOURNEY ================= */}
+        <section className="bg-white">
+          <div className="wrap">
+
+            <div className="section-head">
+              <div className="rule"></div>
+              <h2>From Potential to Opportunity</h2>
+            </div>
+
+            <div className="journey-track">
+
+              <div className="journey-line"></div>
+
+              {[
+                ["01", "Learn", "Foundational skills"],
+                ["02", "Prepare", "Communication & confidence"],
+                ["03", "Practice", "Mock interviews"],
+                ["04", "Connect", "Matched with employers"],
+                ["05", "Grow", "Long-term progression"],
+              ].map((item) => (
+                <div className="journey-step" key={item[0]}>
+
+                  <div className="journey-dot">
+                    {item[0]}
+                  </div>
+
+                  <h4>{item[1]}</h4>
+
+                  <p>{item[2]}</p>
+                </div>
+              ))}
+
+            </div>
+
+            <p className="journey-note">
+              NYC focuses on transforming potential into professional
+              readiness, then connecting prepared candidates with suitable
+              opportunities — one deliberate stage at a time.
             </p>
 
-            <div className="hero-buttons">
+          </div>
+        </section>
 
-              <button className="main-btn gold-btn">
-                Explore Careers
-                <span>→</span>
-              </button>
 
-              <button className="main-btn outline-btn">
-                Hire Talent
-                <span>→</span>
-              </button>
+        {/* ================= SERVICES ================= */}
+        <section className="bg-cream" id="services">
+          <div className="wrap">
 
+            <div className="section-head">
+              <div className="rule"></div>
+              <h2>What We Do</h2>
+            </div>
+
+            <div className="services-grid">
+
+              {[
+                [
+                  "Career Development",
+                  "Helping individuals understand their strengths, improve their professional skills and build a clear career direction.",
+                ],
+                [
+                  "Job-Ready Training",
+                  "Practical training designed to prepare candidates for workplace expectations.",
+                ],
+                [
+                  "English & Communication",
+                  "Developing professional English, workplace communication and confidence.",
+                ],
+                [
+                  "Interview Preparation",
+                  "Helping candidates prepare through interview guidance, practice and mock interviews.",
+                ],
+                [
+                  "Talent Solutions",
+                  "Helping organizations identify, assess and connect with capable candidates.",
+                ],
+                [
+                  "Job Opportunities",
+                  "Connecting job-ready candidates with relevant opportunities.",
+                ],
+              ].map((service, index) => (
+                <div className="service-card" key={index}>
+
+                  <div className="service-icon">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                  <h3>{service[0]}</h3>
+
+                  <p>{service[1]}</p>
+
+                </div>
+              ))}
+
+            </div>
+          </div>
+        </section>
+
+
+        {/* ================= WHY NYC ================= */}
+        <section className="bg-burgundy">
+          <div className="wrap">
+
+            <div className="why-wrap">
+
+              <div className="section-head">
+                <div className="rule"></div>
+
+                <h2 className="white-title">
+                  Why Choose NYC?
+                </h2>
+
+                <p>
+                  A practical, credibility-first approach — built around
+                  preparation, not promises.
+                </p>
+              </div>
+
+              <div className="why-list">
+
+                {[
+                  [
+                    "Job-ready, not just job-seeking",
+                    "We focus on genuine readiness, so candidates walk into opportunities prepared to contribute.",
+                  ],
+                  [
+                    "Practical career preparation",
+                    "Training built around real workplace expectations, not theory alone.",
+                  ],
+                  [
+                    "Communication and confidence development",
+                    "Spoken English, presentation and professional presence, developed with care.",
+                  ],
+                  [
+                    "Interview-focused preparation",
+                    "Structured guidance, practice and mock interviews ahead of the real thing.",
+                  ],
+                  [
+                    "Candidate and employer ecosystem",
+                    "Two sides of the employment journey, supported within a single platform.",
+                  ],
+                  [
+                    "Professional and human approach",
+                    "Every candidate and employer is treated as a partner, not a transaction.",
+                  ],
+                ].map((item, index) => (
+                  <div className="why-item" key={index}>
+
+                    <span className="why-mark">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <div>
+                      <h4>{item[0]}</h4>
+                      <p>{item[1]}</p>
+                    </div>
+
+                  </div>
+                ))}
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* ================= ECOSYSTEM ================= */}
+        <section
+          className="bg-white"
+          id="ecosystem"
+        >
+          <div className="wrap">
+
+            <div className="section-head">
+              <div className="rule"></div>
+
+              <h2>A Connected Ecosystem</h2>
+
+              <p>
+                Built for two audiences, moving toward the same outcome.
+              </p>
             </div>
 
           </div>
 
+          <div className="eco-split">
 
-          {/* HERO JOURNEY BAR */}
+            {/* Candidates */}
+            <div className="eco-panel candidates">
 
-          <div className="hero-steps">
-
-            <div className="hero-step">
-
-              <div className="step-icon">
-                ♧
-              </div>
-
-              <div>
-                <strong>Train</strong>
-                <small>Build Skills</small>
-              </div>
-
-            </div>
-
-            <div className="step-arrow">»</div>
-
-            <div className="hero-step">
-
-              <div className="step-icon">
-                ♧
-              </div>
-
-              <div>
-                <strong>Prepare</strong>
-                <small>Build Confidence</small>
-              </div>
-
-            </div>
-
-            <div className="step-arrow">»</div>
-
-            <div className="hero-step">
-
-              <div className="step-icon">
-                ♧
-              </div>
-
-              <div>
-                <strong>Connect</strong>
-                <small>Find Opportunities</small>
-              </div>
-
-            </div>
-
-            <div className="step-arrow">»</div>
-
-            <div className="hero-step">
-
-              <div className="step-icon">
-                ♧
-              </div>
-
-              <div>
-                <strong>Grow</strong>
-                <small>Build Your Career</small>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      {/* =====================================================
-          WHO WE ARE
-      ====================================================== */}
-
-      <section className="who-section">
-
-        <div className="about-container who-grid">
-
-          <div className="who-content">
-
-            <span className="section-label">
-              WHO WE ARE
-            </span>
-
-            <h2>
-              We prepare people
-              <br />
-              for opportunities.
-            </h2>
-
-            <p className="strong-text">
-              NYC — Navigate Your Career is a career development,
-              job-readiness training and recruitment platform.
-            </p>
-
-            <p>
-              We help candidates develop professional skills,
-              communication, confidence and interview readiness
-              needed to become job-ready.
-            </p>
-
-            <p>
-              Once candidates are ready, NYC helps connect suitable
-              candidates with relevant employers and interview
-              opportunities.
-            </p>
-
-
-            <div className="philosophy">
-
-              <span>OUR PHILOSOPHY</span>
+              <span className="eco-tag">
+                For Candidates
+              </span>
 
               <h3>
-                Learn.
-                <br />
-                Prepare.
-                <br />
-                Connect.
-                <br />
-                Grow.
+                From preparation to employment
               </h3>
 
               <p>
-                From building skills to connecting with opportunities,
-                NYC supports candidates throughout their career journey.
+                NYC helps candidates move from learning and preparation
+                toward real employment opportunities — step by step,
+                with support at every stage.
+              </p>
+
+              <div className="eco-flow">
+                <span className="step">Learn</span>
+                <span className="arrow">→</span>
+                <span className="step">Practice</span>
+                <span className="arrow">→</span>
+                <span className="step">Prepare</span>
+                <span className="arrow">→</span>
+                <span className="step">Apply</span>
+                <span className="arrow">→</span>
+                <span className="step">Interview</span>
+                <span className="arrow">→</span>
+                <span className="step">Grow</span>
+              </div>
+
+            </div>
+
+
+            {/* Employers */}
+            <div className="eco-panel employers">
+
+              <span className="eco-tag">
+                For Employers
+              </span>
+
+              <h3>
+                From requirement to hire
+              </h3>
+
+              <p>
+                NYC helps employers connect with candidates who have been
+                prepared for professional environments, reducing the effort
+                of sourcing and screening.
+              </p>
+
+              <div className="eco-flow">
+                <span className="step">Define Need</span>
+                <span className="arrow">→</span>
+                <span className="step">Source Talent</span>
+                <span className="arrow">→</span>
+                <span className="step">Screen</span>
+                <span className="arrow">→</span>
+                <span className="step">Interview</span>
+                <span className="arrow">→</span>
+                <span className="step">Hire</span>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+
+        {/* ================= MISSION ================= */}
+        <section className="bg-burgundy">
+          <div className="wrap">
+
+            <div className="statement">
+
+              <div className="rule"></div>
+
+              <span className="section-kicker">
+                Our Mission
+              </span>
+
+              <h2>
+                To prepare people for opportunities and help organizations
+                find capable talent.
+              </h2>
+
+              <p>
+                NYC exists to bridge the gap between potential and
+                professional opportunity. We do this through skills,
+                communication, confidence and structured preparation —
+                paired with meaningful connections between candidates and
+                employers who are the right fit for one another.
               </p>
 
             </div>
 
           </div>
+        </section>
 
 
-          {/* ABOUT IMAGE CARD
+        {/* ================= VISION ================= */}
+        <section className="bg-cream">
+          <div className="wrap">
 
-              Put image here:
-              public/images/about-city.jpg
-          */}
+            <div className="statement">
 
-          <div
-            className="purpose-card"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(48,7,13,.68), rgba(48,7,13,.78)), url('/images/about-city.jpg')",
-            }}
-          >
+              <div className="rule"></div>
 
-            <div className="quote-mark">“</div>
+              <span className="section-kicker">
+                Our Vision
+              </span>
 
-            <h3>
-              Turning potential
-              <br />
-              into opportunity.
-            </h3>
+              <h2 className="dark-heading">
+                A trusted career and talent ecosystem.
+              </h2>
 
-            <p>
-              From learning new skills to preparing for interviews
-              and connecting with employers, NYC supports candidates
-              throughout their career journey.
-            </p>
-
-            <div className="purpose-divider"></div>
-
-            <div className="purpose-stats">
-
-              <div>
-                <span>Career Focused</span>
-                <small>Development</small>
-                <strong>01</strong>
-              </div>
-
-              <div>
-                <span>Job-ready</span>
-                <small>Preparation</small>
-                <strong>02</strong>
-              </div>
+              <p>
+                To build a trusted career and talent ecosystem where people
+                can continuously develop their skills, become confident
+                professionals and connect with meaningful opportunities.
+              </p>
 
             </div>
 
           </div>
-
-        </div>
-      </section>
+        </section>
 
 
-      {/* =====================================================
-          SERVICES
-      ====================================================== */}
+        {/* ================= DIFFERENT ================= */}
+        <section className="bg-white">
+          <div className="wrap">
 
-      <section className="services-section">
+            <div className="more-wrap">
 
-        <div className="about-container">
+              <div className="more-copy">
 
-          <div className="center-title">
+                <div className="rule"></div>
 
-            <span className="section-label">
-              WHAT WE DO
-            </span>
+                <span className="section-kicker">
+                  More Than a Job Portal
+                </span>
 
-            <h2>
-              Everything You Need to Move Forward
-            </h2>
-
-            <p>
-              NYC brings career development, training, interview
-              preparation and recruitment together in one platform.
-            </p>
-
-          </div>
-
-
-          <div className="services-grid">
-
-            {services.map((service) => (
-
-              <article
-                className="service-card"
-                key={service.number}
-              >
-
-                <div className="service-header">
-
-                  <div className="service-icon">
-                    {service.icon}
-                  </div>
-
-                  <strong>
-                    {service.number}
-                  </strong>
-
-                </div>
-
-                <h3>
-                  {service.title}
-                </h3>
+                <h2>
+                  What Makes NYC Different
+                </h2>
 
                 <p>
-                  {service.text}
+                  NYC is not only a job listing website. It brings together
+                  career development, training, interview preparation, job
+                  opportunities, candidate readiness and recruitment &
+                  talent solutions — as one connected system, rather than
+                  separate services.
                 </p>
 
-              </article>
-
-            ))}
-
-          </div>
-
-        </div>
-      </section>
-
-
-      {/* =====================================================
-          JOURNEY
-      ====================================================== */}
-
-      <section className="journey-section">
-
-        <div className="about-container">
-
-          <div className="center-title">
-
-            <span className="section-label">
-              THE NYC JOURNEY
-            </span>
-
-            <h2>
-              From Potential to Opportunity
-            </h2>
-
-          </div>
-
-
-          <div className="journey-grid">
-
-            {journey.map((item) => (
-
-              <div
-                className="journey-card"
-                key={item.number}
-              >
-
-                <div className="journey-number">
-                  {item.number}
-                </div>
-
-                <div className="journey-icon">
-                  {item.icon}
-                </div>
-
-                <h3>
-                  {item.title}
-                </h3>
-
                 <p>
-                  {item.text}
+                  Each part strengthens the other: preparation makes
+                  candidates more employable, and employable candidates
+                  make hiring easier for organizations.
                 </p>
 
               </div>
 
-            ))}
 
-          </div>
+              <div className="orbit">
 
-        </div>
-      </section>
-
-
-      {/* =====================================================
-          CANDIDATES / EMPLOYERS
-      ====================================================== */}
-
-      <section className="audience-section">
-
-        <div className="about-container">
-
-          <div className="audience-grid">
-
-
-            {/* CANDIDATES */}
-
-            <div
-              className="audience-card candidate-card"
-              style={{
-                backgroundImage:
-                  "linear-gradient(rgba(48,7,13,.87), rgba(48,7,13,.91)), url('/images/candidate.jpg')",
-              }}
-            >
-
-              <div className="audience-top">
-
-                <div className="audience-icon">
-                  ♧
+                <div className="orbit-center">
+                  Career & Talent Ecosystem
                 </div>
 
-                <span>
-                  FOR CANDIDATES
-                </span>
+                <div className="orbit-node node-1">
+                  <div className="dot"></div>
+                  Career Development
+                </div>
+
+                <div className="orbit-node node-2">
+                  <div className="dot"></div>
+                  Training
+                </div>
+
+                <div className="orbit-node node-3">
+                  <div className="dot"></div>
+                  Interview Preparation
+                </div>
+
+                <div className="orbit-node node-4">
+                  <div className="dot"></div>
+                  Job Opportunities
+                </div>
+
+                <div className="orbit-node node-5">
+                  <div className="dot"></div>
+                  Candidate Readiness
+                </div>
+
+                <div className="orbit-node node-6">
+                  <div className="dot"></div>
+                  Recruitment & Talent Solutions
+                </div>
 
               </div>
-
-              <h2>
-                Build Skills.
-                <br />
-                Build Confidence.
-              </h2>
-
-              <p>
-                Develop professional skills, improve communication,
-                prepare for interviews and discover relevant job
-                opportunities.
-              </p>
-
-
-              <div className="audience-list">
-
-                {candidatePoints.map((point) => (
-
-                  <div key={point}>
-                    <span>✓</span>
-                    {point}
-                  </div>
-
-                ))}
-
-              </div>
-
-
-              <button className="audience-button">
-                Start Your Journey
-                <span>→</span>
-              </button>
 
             </div>
+          </div>
+        </section>
 
 
-            {/* EMPLOYERS */}
+        {/* ================= TRUST ================= */}
+        <section className="bg-cream" id="trust">
+          <div className="wrap">
 
-            <div
-              className="audience-card employer-card"
-              style={{
-                backgroundImage:
-                  "linear-gradient(rgba(48,7,13,.87), rgba(48,7,13,.91)), url('/images/employer.jpg')",
-              }}
-            >
-
-              <div className="audience-top">
-
-                <div className="audience-icon">
-                  ♧
-                </div>
-
-                <span>
-                  FOR EMPLOYERS
-                </span>
-
-              </div>
+            <div className="section-head">
+              <div className="rule"></div>
 
               <h2>
-                Find Capable
-                <br />
-                Talent.
+                Trust & Professional Standards
               </h2>
 
               <p>
-                Connect with job-ready candidates and simplify your
-                recruitment process with talent sourcing and candidate
-                screening support.
+                Preparation and recruitment both depend on trust —
+                here's how we protect it.
               </p>
+            </div>
 
+            <div className="trust-grid">
 
-              <div className="audience-list">
+              {[
+                [
+                  "Candidate privacy",
+                  "Personal information is handled with care and used only for career-related purposes.",
+                ],
+                [
+                  "Secure user accounts",
+                  "Accounts are protected to keep candidate and employer data safe.",
+                ],
+                [
+                  "Verified employer workflows",
+                  "Employer activity follows a structured, verified process.",
+                ],
+                [
+                  "Responsible job publishing",
+                  "Job listings are published thoughtfully, with accuracy in mind.",
+                ],
+                [
+                  "Admin-reviewed job postings",
+                  "Postings are reviewed before candidates see them.",
+                ],
+                [
+                  "Professional recruitment practices",
+                  "Recruitment support follows consistent, professional standards.",
+                ],
+                [
+                  "Transparent communication",
+                  "Candidates and employers are kept informed at every stage.",
+                ],
+                [
+                  "Consistent processes",
+                  "The same careful process applies to every candidate and every employer.",
+                ],
+              ].map((item, index) => (
+                <div className="trust-item" key={index}>
 
-                {employerPoints.map((point) => (
-
-                  <div key={point}>
-                    <span>✓</span>
-                    {point}
+                  <div className="trust-icon">
+                    {String(index + 1).padStart(2, "0")}
                   </div>
 
-                ))}
+                  <h4>{item[0]}</h4>
+
+                  <p>{item[1]}</p>
+
+                </div>
+              ))}
+
+            </div>
+          </div>
+        </section>
+
+
+        {/* ================= FUTURE ================= */}
+        <section className="bg-white">
+          <div className="wrap">
+
+            <div className="future-wrap">
+
+              <div className="future-copy">
+
+                <div className="rule"></div>
+
+                <span className="section-kicker">
+                  Future Vision
+                </span>
+
+                <h2>
+                  Built for Today. Ready for Tomorrow.
+                </h2>
+
+                <p>
+                  NYC is initially focused on the Indian market, while the
+                  platform architecture is designed to support future
+                  international recruitment and talent solutions as the
+                  ecosystem grows.
+                </p>
+
+                <div className="future-tags">
+
+                  {[
+                    "Multiple Countries",
+                    "International Candidates",
+                    "International Employers",
+                    "Multiple Currencies",
+                    "Multiple Time Zones",
+                    "International Workflows",
+                  ].map((tag) => (
+                    <span className="future-tag" key={tag}>
+                      {tag}
+                    </span>
+                  ))}
+
+                </div>
 
               </div>
 
 
-              <button className="audience-button dark-button">
+              <div className="future-panel">
+
+                <div className="future-row">
+                  <span className="now">
+                    Primary market
+                  </span>
+
+                  <span className="later">
+                    India
+                  </span>
+                </div>
+
+                <div className="future-row">
+                  <span className="now">
+                    Platform design
+                  </span>
+
+                  <span className="later">
+                    Built for scale
+                  </span>
+                </div>
+
+                <div className="future-row">
+                  <span className="now">
+                    Future expansion
+                  </span>
+
+                  <span className="later">
+                    USA & International
+                  </span>
+                </div>
+
+                <div className="future-row">
+                  <span className="now">
+                    Architecture
+                  </span>
+
+                  <span className="later">
+                    Multi-country ready
+                  </span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        {/* ================= FINAL CTA ================= */}
+        <section className="cta-final">
+
+          <div className="hero-dotgrid"></div>
+
+          <div className="wrap">
+
+            <h2>
+              Your Next Opportunity Starts With Preparation.
+            </h2>
+
+            <p>
+              Whether you're building your career or looking for capable
+              talent, NYC helps you move from potential to opportunity.
+            </p>
+
+            <div className="cta-actions">
+
+              <a href="#" className="btn btn-gold">
+                Start Your Career
+              </a>
+
+              <a href="#" className="btn btn-outline-light">
                 Hire Talent
-                <span>→</span>
-              </button>
+              </a>
 
             </div>
 
           </div>
+        </section>
 
-        </div>
-      </section>
-
-
-      {/* =====================================================
-          FINAL CTA
-      ====================================================== */}
-
-      <section className="final-section">
-
-        {/* Bottom city image
-            Put image here:
-            public/images/cta-city.jpg
-        */}
-
-        <div
-          className="final-background"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(48,7,13,.78), rgba(48,7,13,.86)), url('/images/cta-city.jpg')",
-          }}
-        ></div>
+      </main>
 
 
-        <div className="final-content">
-
-          <span className="section-label">
-            NAVIGATE YOUR CAREER
-          </span>
-
-          <h2>
-            Your Next Opportunity
-            <br />
-            Starts Here.
-          </h2>
-
-          <p>
-            Learn new skills, prepare for opportunities and
-            connect with the right career path.
-          </p>
-
-
-          <div className="hero-buttons">
-
-            <button className="main-btn gold-btn">
-              Explore Careers
-              <span>→</span>
-            </button>
-
-            <button className="main-btn outline-btn">
-              Hire Talent
-              <span>→</span>
-            </button>
-
-          </div>
-
-        </div>
-
-      </section>
-
-    </main>
+      {/* ================= FOOTER ================= */}
+      <Footer />
+    </>
   );
 }
 
 export default About;
+

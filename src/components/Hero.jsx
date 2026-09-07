@@ -1,7 +1,11 @@
 import heroImage from "../../nyc.png";
 import "./hero.css";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+
+  const navigate = useNavigate();
+
   return (
     <main
       className="hero"
@@ -26,11 +30,17 @@ function Hero() {
 
         <div className="hero-buttons">
 
-          <button className="primary-btn">
+          <button
+            className="primary-btn"
+            onClick={() => navigate("/ExploreCareer")}
+          >
             Explore Careers
           </button>
 
-          <button className="secondary-btn">
+          <button
+            className="secondary-btn"
+            onClick={() => navigate("/hire-talent")}
+          >
             Hire Talent
           </button>
 
@@ -71,6 +81,7 @@ function Hero() {
           </div>
 
         </div>
+
       </div>
     </main>
   );
